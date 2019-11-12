@@ -3,7 +3,6 @@ RSpec.describe 'songs/new', type: :feature do
     visit new_song_path
 
     form = find('form')
-
     expect(form.find('input#song_title')[:name]).to eq('song[title]')
     expect(form.find('input#song_release_year')[:name]).to eq('song[release_year]')
     expect(form.find('input#song_released')[:name]).to eq('song[released]')
