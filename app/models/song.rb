@@ -1,5 +1,5 @@
 class Song < ApplicationRecord
-    validate :in_future
+    validate :future
     validates :title, :artist_name, presence: true
     validates :title, uniqueness: { scope: :release_year }
     validates :released, inclusion: { in: [true, false] }
@@ -9,7 +9,7 @@ class Song < ApplicationRecord
         self.released
     end
 
-    def in_future
+    def future
         if !!self.release_year
             if self.release_year > Time.now.year 
                 errors.add(:release_year, "Must be released before the future")
