@@ -1,0 +1,10 @@
+<h1>show</h1>
+
+<h2><%= @song.title %></h2>
+<h2><%= @song.released %></h2>
+<h2><%= @song.release_year %></h2>
+<h2><%= @song.artist_name %></h2>
+<h2><%= @song.genre %></h2>
+
+<h4><%= button_to "Edit", edit_song_path(@song), method: :get %></h4>
+<h4><%= button_to "Delete", song_path(@song), method: :delete %></h4>
