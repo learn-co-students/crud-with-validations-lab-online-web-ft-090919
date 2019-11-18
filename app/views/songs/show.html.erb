@@ -1,0 +1,16 @@
+<h2><%= @song.title %></h2> #show the song title    
+by <%= @song.artist_name%> #show the artist name 
+<% if @song.released? %> #dont show but check if the song is realsed 
+
+released in #when was the song realsed 
+<<% @song.release_year %> #there it is 
+
+< %end% >
+
+<h3> @song.genre </h3> #show the genre 
+
+
+
+<%= link_to 'Edit', edit_song_path(@song) %> #link to the edit page 
+
+  
